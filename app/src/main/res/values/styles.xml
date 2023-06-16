@@ -1,0 +1,114 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="fontRegular" parent="AppTheme">
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontFamily">@font/regular</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="fontBold" parent="AppTheme">
+        <item name="android:fontFamily">@font/semibold</item>
+        <item name="fontFamily">@font/semibold</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="LoginTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorFullWhite</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorBlack</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="ActionBar.nameText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorFullWhite</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/regular</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="ActionBar.subtitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@color/colorFullWhite</item>
+        <item name="android:textSize">22sp</item>
+        <item name="fontFamily">@font/semibold</item>
+    </style>
+
+    <style name="ActionBarThemeOverlay" parent="">
+        <item name="android:textColorPrimary">@color/colorFullWhite</item>
+        <item name="actionMenuTextColor">@color/colorBlack</item>
+        <item name="android:textColorSecondary">@color/colorFullWhite</item>
+    </style>
+
+    <style name="ProfileToolbar" parent="">
+        <item name="actionMenuTextColor">@color/colorBlack</item>
+        <item name="android:textColorSecondary">@color/colorFullWhite</item>
+        <item name="actionMenuTextAppearance">@style/ProfileMenu</item>
+    </style>
+
+    <style name="ProfileMenu" parent="ProfileToolbar">
+        <item name="android:textColor">@color/colorFullWhite</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+
+    </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:paddingBottom">0dip</item>
+        <item name="listPreferredItemHeightSmall">50dp</item><!-- menu item height- vary as u need -->
+
+    </style>
+
+</resources>
