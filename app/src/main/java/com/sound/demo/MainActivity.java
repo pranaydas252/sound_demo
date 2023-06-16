@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.util.Calendar;
 
@@ -100,12 +102,22 @@ public class MainActivity extends AppCompatActivity {
 
 //                Intent serviceIntent = new Intent(this, LocationService.class);
 //                startService(serviceIntent);
-                if (alarmManager == null) {
-                    alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-                    Intent intent = new Intent(this, AlarmReceive.class);
-                    pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
-                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 30000,
-                            pendingIntent);
+
+//                if (alarmManager == null) {
+//                    alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+//                    Intent intent = new Intent(this, AlarmReceive.class);
+//                    pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
+//                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 5000,
+//                            pendingIntent);
+//                }
+
+                Intent serviceIntent = new Intent(this, NewForegroundTrackingService.class);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    // Start the foreground service with a notification for Android Oreo and above
+                    ContextCompat.startForegroundService(this, serviceIntent);
+                } else {
+                    // Start the foreground service for devices below Android Oreo
+                    startService(serviceIntent);
                 }
             } else {
                 // The user has denied the permission.
