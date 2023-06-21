@@ -10,18 +10,89 @@
         tools:context=".SplashScreen.SplashScreenActivity">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logo"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="100dp"
+            android:layout_height="150dp"
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/logo" />
+            android:layout_marginTop="50dp"
+            android:src="@drawable/logo_vertical" />
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <TextView
+            android:id="@+id/title"
+            style="@style/fontBold"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/background" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="Log In"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="30sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="Username"
+            app:boxStrokeWidth="0dp"
+            app:startIconDrawable="@drawable/ic_user"
+            app:startIconTint="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                style="@style/fontRegular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="30dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/usernameLayout"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="Password"
+            app:boxStrokeWidth="0dp"
+            app:startIconDrawable="@drawable/ic_password"
+            app:startIconTint="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                style="@style/fontRegular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="30dp"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimaryText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logIn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Get Started"
+            android:layout_below="@+id/passwordLayout"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cornerRadius="10dp"
+            />
+
     </RelativeLayout>
 </layout>
