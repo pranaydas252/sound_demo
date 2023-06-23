@@ -75,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mCon, TrackingActivity.class));
+//                startActivity(new Intent(mCon, TrackingActivity.class));
+                startActivity(new Intent(mCon, DetailsActivity.class));
             }
         });
     }
